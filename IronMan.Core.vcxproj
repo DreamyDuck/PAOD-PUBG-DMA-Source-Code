@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release_Console|x64">
+      <Configuration>Release_Console</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Debug|x64">
+      <Configuration>Release_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="allocMem.cpp" />
+    <ClCompile Include="Core\Auth.cpp" />
+    <ClCompile Include="Core\Config.cpp" />
+    <ClCompile Include="Core\Core.cpp" />
+    <ClCompile Include="Core\DirectX\DirectX11.cpp" />
+    <ClCompile Include="Core\DirectX\Drawing.cpp" />
+    <ClCompile Include="Core\DirectX\Imgui_dx11.cpp" />
+    <ClCompile Include="Core\DirectX\Imgui_win32.cpp" />
+    <ClCompile Include="Core\DMA\DMAHandler.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">-fsanitize=address- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Core\DriverControl.cpp" />
+    <ClCompile Include="Core\FilePak.cpp" />
+    <ClCompile Include="Core\HandWeaponManager.cpp" />
+    <ClCompile Include="Core\Imgui\imgui.cpp" />
+    <ClCompile Include="Core\Imgui\imgui_draw.cpp" />
+    <ClCompile Include="Core\Imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Core\ItemManager.cpp" />
+    <ClCompile Include="Core\Math\Math.cpp" />
+    <ClCompile Include="Core\Menu.cpp" />
+    <ClCompile Include="Core\MouseController\KMBOX\KmboxNet.cpp" />
+    <ClCompile Include="Core\PatternLoader.cpp" />
+    <ClCompile Include="Core\PhysicsManager\PhysicsManager.cpp" />
+    <ClCompile Include="Core\SDK\CoreUObject\Class.cpp" />
+    <ClCompile Include="Core\SDK\CoreUObject\Object.cpp" />
+    <ClCompile Include="Core\SDK\ObjectManager.cpp" />
+    <ClCompile Include="Core\SDK\ObjectsStore.cpp" />
+    <ClCompile Include="Core\SDK\SDK.cpp" />
+    <ClCompile Include="Core\SDK\UEncrypt.cpp" />
+    <ClCompile Include="Core\SDK\UnrealNames.cpp" />
+    <ClCompile Include="Core\SkinWeaponManager.cpp" />
+    <ClCompile Include="Core\VehicleManager.cpp" />
+    <ClCompile Include="Core\Visuals.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Helper\Analysis\AnalysisBase.cpp" />
+    <ClCompile Include="Helper\Analysis\DecryptAnalysis.cpp" />
+    <ClCompile Include="Helper\Analysis\UObjectAnalysis.cpp" />
+    <ClCompile Include="Helper\Asm\AsmHelper32.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">Use</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Helper\Asm\AsmHelper64.cpp" />
+    <ClCompile Include="Helper\Misc\Console.cpp" />
+    <ClCompile Include="Helper\Misc\InitOnce.cpp" />
+    <ClCompile Include="Helper\Misc\JsonHelper.cpp" />
+    <ClCompile Include="Helper\Misc\ThreadMutex.cpp" />
+    <ClCompile Include="Helper\Misc\Utils.cpp" />
+    <ClCompile Include="Helper\Misc\ZydisWrapper.cpp" />
+    <ClCompile Include="HijackExport.cpp" />
+    <ClCompile Include="Include\WinHeaders.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\assembler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\codegen.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\compiler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\constpool.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\containers.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\context.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\cpuinfo.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\cputicks.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\error.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\globals.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\intutil.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\logger.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\operand.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\runtime.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\string.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\vmem.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\base\zone.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\x86\x86assembler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\x86\x86compiler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\x86\x86context.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\x86\x86cpuinfo.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\x86\x86inst.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\x86\x86operand.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\x86\x86operand_regs.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\AsmJit\x86\x86scheduler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="allocMem.h" />
+    <ClInclude Include="Core\Auth.h" />
+    <ClInclude Include="Core\Colorset.h" />
+    <ClInclude Include="Core\Core.hpp" />
+    <ClInclude Include="Core\DirectX\DirectX11.h" />
+    <ClInclude Include="Core\DirectX\Drawing.h" />
+    <ClInclude Include="Core\DirectX\Imgui_dx11.h" />
+    <ClInclude Include="Core\DirectX\Imgui_win32.h" />
+    <ClInclude Include="Core\DirectX\ZeroGUI.h" />
+    <ClInclude Include="Core\DirectX\ZeroInput.h" />
+    <ClInclude Include="Core\DMA\DMAHandler.h" />
+    <ClInclude Include="Core\DMA\Include\leechcore.h" />
+    <ClInclude Include="Core\DMA\Include\vmmdll.h" />
+    <ClInclude Include="Core\DriverControl.h" />
+    <ClInclude Include="Core\FilePak.h" />
+    <ClInclude Include="Core\HandWeaponManager.h" />
+    <ClInclude Include="Core\Image.h" />
+    <ClInclude Include="Core\ItemManager.h" />
+    <ClInclude Include="Core\Math\Math.h" />
+    <ClInclude Include="Core\Math\Matrix.hpp" />
+    <ClInclude Include="Core\Math\Vector.hpp" />
+    <ClInclude Include="Core\Menu.h" />
+    <ClInclude Include="Core\MouseController\KMBOX\HidTable.h" />
+    <ClInclude Include="Core\MouseController\KMBOX\KmboxB.h" />
+    <ClInclude Include="Core\MouseController\KMBOX\KmboxNet.h" />
+    <ClInclude Include="Core\PatternLoader.h" />
+    <ClInclude Include="Core\Imgui\imconfig.h" />
+    <ClInclude Include="Core\Imgui\imgui.h" />
+    <ClInclude Include="Core\Imgui\imgui_internal.h" />
+    <ClInclude Include="Core\Imgui\imstb_rectpack.h" />
+    <ClInclude Include="Core\Imgui\imstb_textedit.h" />
+    <ClInclude Include="Core\Imgui\imstb_truetype.h" />
+    <ClInclude Include="Core\Config.h" />
+    <ClInclude Include="Core\PhysicsManager\PhysicsManager.h" />
+    <ClInclude Include="Core\PhysicsManager\PhysicStruct.h" />
+    <ClInclude Include="Core\SDK\CoreUObject\Class.h" />
+    <ClInclude Include="Core\SDK\CoreUObject\Object.h" />
+    <ClInclude Include="Core\SDK\CoreUObject\ObjectMacros.h" />
+    <ClInclude Include="Core\SDK\CoreUObject\Parameters.h" />
+    <ClInclude Include="Core\SDK\CoreUObject\Struct.h" />
+    <ClInclude Include="Core\SDK\ObjectManager.h" />
+    <ClInclude Include="Core\SDK\ObjectsStore.h" />
+    <ClInclude Include="Core\SDK\SDK.h" />
+    <ClInclude Include="Core\SDK\UEncrypt.h" />
+    <ClInclude Include="Core\SDK\UnrealNames.h" />
+    <ClInclude Include="Core\ShareRadar\json.h" />
+    <ClInclude Include="Core\SkinWeaponManager.h" />
+    <ClInclude Include="Core\VehicleManager.h" />
+    <ClInclude Include="Core\Visuals.h" />
+    <ClInclude Include="Helper\Analysis\AnalysisBase.h" />
+    <ClInclude Include="Helper\Analysis\DecryptAnalysis.h" />
+    <ClInclude Include="Helper\Analysis\UObjectAnalysis.h" />
+    <ClInclude Include="Helper\Asm\AsmFactory.hpp" />
+    <ClInclude Include="Helper\Asm\AsmHelper32.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Helper\Asm\AsmHelper64.hpp" />
+    <ClInclude Include="Helper\Asm\AsmStack.hpp" />
+    <ClInclude Include="Helper\Asm\AsmVariant.hpp" />
+    <ClInclude Include="Helper\Asm\IAsmHelper.hpp" />
+    <ClInclude Include="Helper\HttpLib\httplib.h" />
+    <ClInclude Include="Helper\Misc\Console.hpp" />
+    <ClInclude Include="Helper\Misc\DynImport.hpp" />
+    <ClInclude Include="Helper\Misc\InitOnce.hpp" />
+    <ClInclude Include="Helper\Misc\JsonHelper.h" />
+    <ClInclude Include="Helper\Misc\ThreadMutex.h" />
+    <ClInclude Include="Helper\Misc\Utils.hpp" />
+    <ClInclude Include="Helper\Misc\ZydisWrapper.h" />
+    <ClInclude Include="Include\delegate.hpp" />
+    <ClInclude Include="Include\Macro.hpp" />
+    <ClInclude Include="Include\Types.hpp" />
+    <ClInclude Include="Include\VMProtectSDK.h" />
+    <ClInclude Include="Include\WinHeaders.hpp" />
+    <ClInclude Include="ThirdParty\AsmJit\ApiBegin.h" />
+    <ClInclude Include="ThirdParty\AsmJit\ApiEnd.h" />
+    <ClInclude Include="ThirdParty\AsmJit\AsmJit.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\assembler.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\codegen.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\compiler.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\constpool.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\containers.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\context_p.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\cpuinfo.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\cputicks.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\error.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\globals.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\intutil.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\lock.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\logger.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\operand.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\runtime.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\string.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\vectypes.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\vmem.h" />
+    <ClInclude Include="ThirdParty\AsmJit\base\zone.h" />
+    <ClInclude Include="ThirdParty\AsmJit\Build.h" />
+    <ClInclude Include="ThirdParty\AsmJit\Config.h" />
+    <ClInclude Include="ThirdParty\AsmJit\host.h" />
+    <ClInclude Include="ThirdParty\AsmJit\x86.h" />
+    <ClInclude Include="ThirdParty\AsmJit\x86\x86assembler.h" />
+    <ClInclude Include="ThirdParty\AsmJit\x86\x86compiler.h" />
+    <ClInclude Include="ThirdParty\AsmJit\x86\x86context_p.h" />
+    <ClInclude Include="ThirdParty\AsmJit\x86\x86cpuinfo.h" />
+    <ClInclude Include="ThirdParty\AsmJit\x86\x86inst.h" />
+    <ClInclude Include="ThirdParty\AsmJit\x86\x86operand.h" />
+    <ClInclude Include="ThirdParty\AsmJit\x86\x86scheduler_p.h" />
+    <ClInclude Include="ThirdParty\cpplinq.hpp" />
+    <ClInclude Include="ThirdParty\stb_image.h" />
+    <ClInclude Include="ThirdParty\Zycore\Allocator.h" />
+    <ClInclude Include="ThirdParty\Zycore\API\Memory.h" />
+    <ClInclude Include="ThirdParty\Zycore\API\Synchronization.h" />
+    <ClInclude Include="ThirdParty\Zycore\API\Terminal.h" />
+    <ClInclude Include="ThirdParty\Zycore\API\Thread.h" />
+    <ClInclude Include="ThirdParty\Zycore\Bitset.h" />
+    <ClInclude Include="ThirdParty\Zycore\Comparison.h" />
+    <ClInclude Include="ThirdParty\Zycore\Defines.h" />
+    <ClInclude Include="ThirdParty\Zycore\Format.h" />
+    <ClInclude Include="ThirdParty\Zycore\LibC.h" />
+    <ClInclude Include="ThirdParty\Zycore\Object.h" />
+    <ClInclude Include="ThirdParty\Zycore\Status.h" />
+    <ClInclude Include="ThirdParty\Zycore\String.h" />
+    <ClInclude Include="ThirdParty\Zycore\Types.h" />
+    <ClInclude Include="ThirdParty\Zycore\Vector.h" />
+    <ClInclude Include="ThirdParty\Zycore\Zycore.h" />
+    <ClInclude Include="ThirdParty\Zycore\ZycoreExportConfig.h" />
+    <ClInclude Include="ThirdParty\Zydis\Decoder.h" />
+    <ClInclude Include="ThirdParty\Zydis\DecoderTypes.h" />
+    <ClInclude Include="ThirdParty\Zydis\Formatter.h" />
+    <ClInclude Include="ThirdParty\Zydis\FormatterBuffer.h" />
+    <ClInclude Include="ThirdParty\Zydis\Generated\EnumInstructionCategory.h" />
+    <ClInclude Include="ThirdParty\Zydis\Generated\EnumISAExt.h" />
+    <ClInclude Include="ThirdParty\Zydis\Generated\EnumISASet.h" />
+    <ClInclude Include="ThirdParty\Zydis\Generated\EnumMnemonic.h" />
+    <ClInclude Include="ThirdParty\Zydis\Generated\EnumRegister.h" />
+    <ClInclude Include="ThirdParty\Zydis\Internal\DecoderData.h" />
+    <ClInclude Include="ThirdParty\Zydis\Internal\FormatterATT.h" />
+    <ClInclude Include="ThirdParty\Zydis\Internal\FormatterBase.h" />
+    <ClInclude Include="ThirdParty\Zydis\Internal\FormatterIntel.h" />
+    <ClInclude Include="ThirdParty\Zydis\Internal\SharedData.h" />
+    <ClInclude Include="ThirdParty\Zydis\Internal\String.h" />
+    <ClInclude Include="ThirdParty\Zydis\MetaInfo.h" />
+    <ClInclude Include="ThirdParty\Zydis\Mnemonic.h" />
+    <ClInclude Include="ThirdParty\Zydis\Register.h" />
+    <ClInclude Include="ThirdParty\Zydis\SharedTypes.h" />
+    <ClInclude Include="ThirdParty\Zydis\ShortString.h" />
+    <ClInclude Include="ThirdParty\Zydis\Status.h" />
+    <ClInclude Include="ThirdParty\Zydis\Utils.h" />
+    <ClInclude Include="ThirdParty\Zydis\Zydis.h" />
+    <ClInclude Include="ThirdParty\Zydis\ZydisExportConfig.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="capi.lib" />
+    <Library Include="Core\DMA\Lib\leechcore.lib" />
+    <Library Include="Core\DMA\Lib\vmm.lib" />
+    <Library Include="dasync.lib" />
+    <Library Include="ec_internal_test.lib" />
+    <Library Include="Include\OpenSSL-Win64\lib\VC\x64\MT\libcrypto.lib" />
+    <Library Include="Include\OpenSSL-Win64\lib\VC\x64\MT\libcrypto_static.lib" />
+    <Library Include="Include\OpenSSL-Win64\lib\VC\x64\MT\libssl.lib" />
+    <Library Include="Include\OpenSSL-Win64\lib\VC\x64\MT\libssl_static.lib" />
+    <Library Include="legacy.lib" />
+    <Library Include="libapps.lib" />
+    <Library Include="libcommon.lib" />
+    <Library Include="libcrypto.lib" />
+    <Library Include="libcrypto_static.lib" />
+    <Library Include="libdefault.lib" />
+    <Library Include="liblegacy.lib" />
+    <Library Include="libssl.lib" />
+    <Library Include="libssl_static.lib" />
+    <Library Include="libtestutil.lib" />
+    <Library Include="loader_attic.lib" />
+    <Library Include="LowLevel.lib" />
+    <Library Include="LowLevelAABB.lib" />
+    <Library Include="LowLevelCloth.lib" />
+    <Library Include="LowLevelDynamics.lib" />
+    <Library Include="LowLevelParticles.lib" />
+    <Library Include="openssl.lib" />
+    <Library Include="ossltest.lib" />
+    <Library Include="padlock.lib" />
+    <Library Include="PhysX3CharacterKinematic_x64.lib" />
+    <Library Include="PhysX3Common_x64.lib" />
+    <Library Include="PhysX3Cooking_x64.lib" />
+    <Library Include="PhysX3Extensions.lib" />
+    <Library Include="PhysX3Vehicle.lib" />
+    <Library Include="PhysX3_x64.lib" />
+    <Library Include="PsFastXml_x64.lib" />
+    <Library Include="PxFoundation_x64.lib" />
+    <Library Include="PxPvdSDK_x64.lib" />
+    <Library Include="PxTask_x64.lib" />
+    <Library Include="p_minimal.lib" />
+    <Library Include="p_test.lib" />
+    <Library Include="SceneQuery.lib" />
+    <Library Include="SimulationController.lib" />
+    <Library Include="VMProtectSDK64.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dasync.def" />
+    <None Include="Include\OpenSSL-Win64\lib\VC\x64\MT\libcrypto.def" />
+    <None Include="Include\OpenSSL-Win64\lib\VC\x64\MT\libssl.def" />
+    <None Include="libcrypto.def" />
+    <None Include="libssl.def" />
+    <None Include="loader_attic.def" />
+    <None Include="ossltest.def" />
+    <None Include="p_minimal.def" />
+    <None Include="p_test.def" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{F3F3B46C-9E56-4D97-BBA2-4CA1E043B1E7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>IronManCore</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>IronMan.Core-DMANo1</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <EnableASAN>false</EnableASAN>
+    <EnableFuzzer>false</EnableFuzzer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <EnableASAN>false</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <EnableASAN>false</EnableASAN>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">
+    <IntDir>$(SolutionDir)obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>D:\c++\paoda\Core;D:\c++\paoda\Include\PxShared\include;$(ProjectDir);D:\c++\paoda\Include\OpenSSL-Win64\include;D:\c++\paoda\Include\OpenSSL-Win64\include\openssl;D:\c++\paoda\Include\PhysX_3.4\Include;$(IncludePath)</IncludePath>
+    <OutDir>C:\Users\Administrator\Documents\NeoDMA</OutDir>
+    <EmbedManifest>false</EmbedManifest>
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>Paod</TargetName>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <LibraryPath>E:\c++\paoda\ThirdParty\Zydis\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>E:\c++\kkk\paoda\obj\x64\Release\IronMan.Core-DMANo1\</IntDir>
+    <IncludePath>$(ProjectDir);E:\c++\kkk\paoda\Include\OpenSSL-Win64\include;E:\c++\kkk\paoda\Include\Lib;E:\c++\kkk\paoda\Include\OpenSSL-Win64;$(IncludePath)</IncludePath>
+    <OutDir>E:\c++\kkk\paoda\obj\x64\Release_Console\IronMan.Core-DMANo1\</OutDir>
+    <EmbedManifest>false</EmbedManifest>
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>NeoDMA</TargetName>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <LibraryPath>E:\c++\kkk\paoda\Include\OpenSSL-Win64\lib\VC\x64\MT;E:\c++\kkk\paoda\Include\OpenSSL-Win64\lib\VC\x64\MD;E:\c++\kkk\paoda\Include\OpenSSL-Win64\lib\VC\x64\MDd;E:\c++\kkk\paoda\Include\OpenSSL-Win64\lib\VC\x64\MTd;$(LibraryPath)</LibraryPath>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">
+    <IntDir>$(SolutionDir)obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(ProjectDir);D:\OpenSSL-Win64\include;$(IncludePath)</IncludePath>
+    <OutDir>C:\Users\Administrator\Documents\NeoDMA</OutDir>
+    <EmbedManifest>false</EmbedManifest>
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>PaodDebug</TargetName>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <LibraryPath>D:\OpenSSL-Win64\lib\VC\x64\MT;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DISABLE_VECTOR_ANNOTATION;ENABLE_CONSOLE;NOMINMAX;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;U_STATIC_IMPLEMENTATION;NDEBUG;IRONMANCORE_EXPORTS;_WINDOWS;_USRDLL;PX_SUPPORT_PVD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)ThirdParty;D:\OpenSSL-Win64\include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/PhysX/src;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/PhysX/src/buffering;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/foundation/source;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/foundation/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/Common/src;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/LowLevel/software/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/LowLevel/api/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/SimulationController/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/SceneQuery;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/characterkinematic;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/common;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/cooking;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/extensions;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/foundation;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/geometry;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/gpu;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/physxprofilesdk;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/physxvisualdebuggersdk;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/pvd;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/pxtask;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/RepX;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/RepXUpgrader;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Snippets/Graphics/include/WIN64;C:/Users/Administrator/Desktop/PhysX-3.4-master/PxShared/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PxShared/src/foundation/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/externalIP/hbao+3.0/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/externalIP/glew-1.13.0/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/Tools/nsight</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeaderFile>Include/WinHeaders.hpp</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <StringPooling>true</StringPooling>
+      <DisableSpecificWarnings>4307;4530</DisableSpecificWarnings>
+      <ObjectFileName>$(IntDir)%(RelativeDir)\</ObjectFileName>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <OmitFramePointers>false</OmitFramePointers>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenGL32.lib;PhysX3_x64.lib;PhysX3Cooking_x64.lib;PhysX3Common_x64.lib;PxPvdSDK_x64.lib;PxFoundation_x64.lib;PhysX3Extensions.lib;VMProtectSDK64.lib;$(ProjectDir)ThirdParty\Zydis\lib\Zydis.lib;$(ProjectDir)ThirdParty\Zycore\lib\Zycore.lib;$(ProjectDir)Core\DMA\Lib\vmm.lib;$(ProjectDir)Core\DMA\Lib\leechcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>crt64.lib;MSVCRT.lib;</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>C:\Users\Administrator\Desktop\VMProtect Ultimate 3.3.1\x64\Lib\Windows;F:\工具箱\Major\在用源码\CoreDMANo1\Include\Lib</AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <SetChecksum>true</SetChecksum>
+      <HeapCommitSize>16384</HeapCommitSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "F:\WeGame\WeGame\Resource\Debug.dll" </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;NOMINMAX;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;U_STATIC_IMPLEMENTATION;NDEBUG;IRONMANCORE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)ThirdParty;D:\OpenSSL-Win64\include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/PhysX/src;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/PhysX/src/buffering;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/foundation/source;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/foundation/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/Common/src;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/LowLevel/software/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/LowLevel/api/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/SimulationController/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/SceneQuery;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/characterkinematic;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/common;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/cooking;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/extensions;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/foundation;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/geometry;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/gpu;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/physxprofilesdk;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/physxvisualdebuggersdk;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/pvd;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/pxtask;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/RepX;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/RepXUpgrader;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Snippets/Graphics/include/WIN64;C:/Users/Administrator/Desktop/PhysX-3.4-master/PxShared/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PxShared/src/foundation/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/externalIP/hbao+3.0/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/externalIP/glew-1.13.0/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/Tools/nsight</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeaderFile>Include/WinHeaders.hpp</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <StringPooling>true</StringPooling>
+      <DisableSpecificWarnings>4307;4530</DisableSpecificWarnings>
+      <ObjectFileName>$(IntDir)%(RelativeDir)\</ObjectFileName>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OmitFramePointers>false</OmitFramePointers>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libcrypto_static.lib;libssl.lib;libssl_static.lib;OpenGL32.lib;PhysX3_x64.lib;PhysX3Cooking_x64.lib;PhysX3Common_x64.lib;PxPvdSDK_x64.lib;PxFoundation_x64.lib;PhysX3Extensions.lib;VMProtectSDK64.lib;$(ProjectDir)ThirdParty\Zydis\lib\Zydis.lib;$(ProjectDir)ThirdParty\Zycore\lib\Zycore.lib;$(ProjectDir)Core\DMA\Lib\vmm.lib;$(ProjectDir)Core\DMA\Lib\leechcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>crt64.lib;MSVCRT.lib;</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>C:\Users\Administrator\Desktop\VMProtect Ultimate 3.3.1\x64\Lib\Windows;F:\工具箱\Major\在用源码\CoreDMANo1\Include\Lib</AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <SetChecksum>true</SetChecksum>
+      <HeapCommitSize>16384</HeapCommitSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "F:\WeGame\WeGame\Resource\Debug.dll" </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;NOMINMAX;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;U_STATIC_IMPLEMENTATION;NDEBUG;IRONMANCORE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)ThirdParty;D:\OpenSSL-Win64\include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/PhysX/src;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/PhysX/src/buffering;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/foundation/source;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/foundation/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/Common/src;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/LowLevel/software/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/LowLevel/api/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/SimulationController/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Source/SceneQuery;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/characterkinematic;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/common;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/cooking;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/extensions;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/foundation;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/geometry;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/gpu;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/physxprofilesdk;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/physxvisualdebuggersdk;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/pvd;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/pxtask;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/RepX;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Include/RepXUpgrader;C:/Users/Administrator/Desktop/PhysX-3.4-master/PhysX_3.4/Snippets/Graphics/include/WIN64;C:/Users/Administrator/Desktop/PhysX-3.4-master/PxShared/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/PxShared/src/foundation/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/externalIP/hbao+3.0/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/externalIP/glew-1.13.0/include;C:/Users/Administrator/Desktop/PhysX-3.4-master/Tools/nsight</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeaderFile>Include/WinHeaders.hpp</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <StringPooling>true</StringPooling>
+      <DisableSpecificWarnings>4307;4530</DisableSpecificWarnings>
+      <ObjectFileName>$(IntDir)%(RelativeDir)\</ObjectFileName>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OmitFramePointers>false</OmitFramePointers>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenGL32.lib;PhysX3_x64.lib;PhysX3Cooking_x64.lib;PhysX3Common_x64.lib;PxPvdSDK_x64.lib;PxFoundation_x64.lib;PhysX3Extensions.lib;VMProtectSDK64.lib;$(ProjectDir)ThirdParty\Zydis\lib\Zydis.lib;$(ProjectDir)ThirdParty\Zycore\lib\Zycore.lib;$(ProjectDir)Core\DMA\Lib\vmm.lib;$(ProjectDir)Core\DMA\Lib\leechcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>crt64.lib;MSVCRT.lib;</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>C:\Users\Administrator\Desktop\VMProtect Ultimate 3.3.1\x64\Lib\Windows;F:\工具箱\Major\在用源码\CoreDMANo1\Include\Lib</AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <SetChecksum>true</SetChecksum>
+      <HeapCommitSize>16384</HeapCommitSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "F:\WeGame\WeGame\Resource\Debug.dll" </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

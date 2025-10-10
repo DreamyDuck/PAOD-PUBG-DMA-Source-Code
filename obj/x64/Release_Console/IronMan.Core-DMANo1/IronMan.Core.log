@@ -1,0 +1,211 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+  Core.cpp
+D:\c++\paoda\Core\DMA\Include\leechcore.h(124,9): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\leechcore.h(124,9):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\leechcore.h(491,8): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\leechcore.h(491,8):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\leechcore.h(500,8): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\leechcore.h(500,8):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(395,39): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(395,39):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1458,29): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1458,29):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1468,29): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1468,29):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1475,31): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1475,31):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1484,32): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1484,32):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1493,40): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1493,40):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1509,29): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1509,29):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1519,29): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1519,29):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1528,30): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1528,30):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1536,35): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1536,35):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1543,32): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1543,32):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1552,32): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1552,32):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1563,30): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1563,30):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1572,29): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1572,29):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1580,33): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1580,33):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1589,30): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1589,30):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1598,28): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1598,28):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(1607,33): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(1607,33):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Core\DMA\Include\vmmdll.h(2141,29): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Core/Core.cpp”)
+      D:\c++\paoda\Core\DMA\Include\vmmdll.h(2141,29):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\gpu\PxGpu.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\particles\PxParticleSystem.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\particles\PxParticleFluid.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\pvd\PxPvdSceneClient.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\characterkinematic\PxBoxController.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\characterkinematic\PxCapsuleController.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\characterkinematic\PxController.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\characterkinematic\PxControllerBehavior.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\characterkinematic\PxControllerManager.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\characterkinematic\PxControllerObstacles.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\characterkinematic\PxExtended.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\particles\PxParticleBase.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\particles\PxParticleFluid.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\particles\PxParticleFluidReadData.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\particles\PxParticleReadData.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\particles\PxParticleSystem.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Include\PhysX_3.4\Include\pvd\PxPvdSceneClient.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+D:\c++\paoda\Core\Imgui\imconfig.h(1,1): warning C4821: 无法确定 Unicode 编码类型，请用签名(BOM)保存文件
+  (编译源文件“Core/Core.cpp”)
+  
+    正在创建库 C:\Users\Administrator\Documents\NeoDMA\Paod.lib 和对象 C:\Users\Administrator\Documents\NeoDMA\Paod.exp
+  LINK : 已指定 /LTCG，但不需要生成代码；从链接命令行中移除 /LTCG 以提高链接器性能
+PhysX3Extensions.lib(ExtDefaultStreams.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtDefaultStreams.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtDefaultErrorCallback.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtDefaultErrorCallback.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnBinaryDeserialization.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnBinaryDeserialization.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnBinarySerialization.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnBinarySerialization.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnSerializationRegistry.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnSerializationRegistry.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtDefaultCpuDispatcher.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtDefaultCpuDispatcher.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnSerializationContext.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnSerializationContext.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnSerialization.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnSerialization.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnSerialUtils.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnSerialUtils.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtExtensions.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtExtensions.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtMetaData.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtMetaData.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtCpuWorkerThread.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtCpuWorkerThread.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnConvX.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnConvX.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(PxExtensionAutoGeneratedMetaDataObjects.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(PxExtensionAutoGeneratedMetaDataObjects.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtPvd.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtPvd.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtDistanceJoint.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtDistanceJoint.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtD6Joint.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtD6Joint.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtFixedJoint.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtFixedJoint.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtPrismaticJoint.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtPrismaticJoint.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtRevoluteJoint.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtRevoluteJoint.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtSphericalJoint.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtSphericalJoint.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnRepXCoreSerializer.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnRepXCoreSerializer.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnJointRepXSerializer.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnJointRepXSerializer.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnConvX_MetaData.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnConvX_MetaData.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnConvX_Convert.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnConvX_Convert.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnConvX_Union.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnConvX_Union.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnConvX_Output.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnConvX_Output.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnConvX_Error.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnConvX_Error.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtDistanceJointSolverPrep.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtDistanceJointSolverPrep.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtJoint.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtJoint.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtD6JointSolverPrep.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtD6JointSolverPrep.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtFixedJointSolverPrep.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtFixedJointSolverPrep.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtPrismaticJointSolverPrep.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtPrismaticJointSolverPrep.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtRevoluteJointSolverPrep.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtRevoluteJointSolverPrep.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(ExtSphericalJointSolverPrep.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(ExtSphericalJointSolverPrep.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+PhysX3Extensions.lib(SnConvX_Align.obj) : warning LNK4099: 未找到 PDB“”(使用“PhysX3Extensions.lib(SnConvX_Align.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+Zydis.lib(Register.obj) : warning LNK4099: 未找到 PDB“”(使用“Zydis.lib(Register.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+Zydis.lib(Decoder.obj) : warning LNK4099: 未找到 PDB“”(使用“Zydis.lib(Decoder.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+Zydis.lib(Utils.obj) : warning LNK4099: 未找到 PDB“”(使用“Zydis.lib(Utils.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+Zydis.lib(EnumRegister.obj) : warning LNK4099: 未找到 PDB“”(使用“Zydis.lib(EnumRegister.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+Zydis.lib(DecoderData.obj) : warning LNK4099: 未找到 PDB“”(使用“Zydis.lib(DecoderData.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+Zydis.lib(SharedData.obj) : warning LNK4099: 未找到 PDB“”(使用“Zydis.lib(SharedData.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+  IronMan.Core.vcxproj -> C:\Users\Administrator\Documents\NeoDMA\Paod.exe
