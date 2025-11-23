@@ -1,5 +1,7 @@
 # PAOD PUBG DMA Source Code
 Just sharing. The code hasn't been updated for a while. It's the source code leaked by PAOD around year ago. You can update it yourself to use it. Because Git LFS storage is insufficient and the model files are large, they were not uploaded — you can contact me to get them for free.
+<img width="583" height="432" alt="Screenshot 2025-11-24 at 5 30 53 AM" src="https://github.com/user-attachments/assets/6e2ace36-4ce2-476d-8dd5-99a74471f167" />
+
 
 ## Offset Update
 You can get simple offset and decryption method from:
